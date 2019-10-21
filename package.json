@@ -1,0 +1,26 @@
+{
+  "name": "proyectonodemon",
+  "version": "1.0.0",
+  "description": "Este proyecto es de la clase de Introducción a la ingenieria de software",
+  "main": "index.js",
+  "scripts": {
+    "test": "nothing"
+  },
+  "repository": {
+    "type": "git",
+    "url": "nothing"
+  },
+  "keywords": [
+    "software"
+  ],
+  "author": "Aldo Cesar Alvarado Magaña",
+  "license": "ISC",
+  "dependencies": {
+    "mysql": "^2.17.1",
+    "mysql2": "^1.7.0",
+    "pug": "^2.0.4",
+    "sequelize": "^5.21.1",
+    "sequelize-cli": "^5.5.1",
+    "xpress": "^2.4.6"
+  }
+}
