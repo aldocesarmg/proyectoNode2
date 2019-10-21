@@ -1,6 +1,10 @@
 var express = require('express');
 var app = express();
+var Sequelize = require('sequelize');
 app.set('view-engine', 'pug');
+
+const models = require('./models');
+const Op = models.Sequelize.Op;
 
 app.get('/',function(req, res){
     //res.send('Hello world');
@@ -13,6 +17,7 @@ app.get('/',function(req, res){
 
 app.get('/listproducts',function(req, res){
     var productos = [];
+    /*
     var item1 = {
         nombre_producto : "Leche LALA",
         id_producto : 1,
@@ -20,9 +25,16 @@ app.get('/listproducts',function(req, res){
         precio : 15.25
     };
     productos.push(item1);
-    res.json(productos);
-})
+    */
+    models.Products.findAll().then(function(data){
+        var info = {
+            'status':'success',
+            'data':data
+        }
+        res.json(info);
+    });
+});
 
 app.listen(3000, function(){
     console.log('localhost:3000');
-})
+});

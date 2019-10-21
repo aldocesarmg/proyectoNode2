@@ -1,7 +1,7 @@
 'use strict';
 module.exports = (sequelize, DataTypes) => {
-    const Productos = sequelize.define('Products', {
-        idproducto: {
+    const Products = sequelize.define('Products', {
+        id_producto: {
             type: DataTypes.INTEGER,
             primaryKey: true
         },
@@ -12,7 +12,7 @@ module.exports = (sequelize, DataTypes) => {
         timestamps: false,
         tableName: 'productos'
     });
-    Productos.associate = function(models){
+    Products.associate = function(models){
         // associations can be defined here
     };
     return Products;
